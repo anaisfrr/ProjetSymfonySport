@@ -32,8 +32,9 @@ class Inscription
     #[ORM\JoinColumn(nullable: false)]
     private $adresses;
 
-    // #[ORM\ManyToOne(targetEntity: Option::class, inversedBy: 'inscriptions')]
-    // private $options;
+    #[ORM\ManyToOne(targetEntity: Option::class, inversedBy: 'inscriptions')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $options;
 
     public function getId(): ?int
     {
@@ -112,15 +113,15 @@ class Inscription
         return $this;
     }
 
-    // public function getOptions(): ?Option
-    // {
-    //     return $this->options;
-    // }
+    public function getOptions(): ?Option
+    {
+        return $this->options;
+    }
 
-//     public function setOptions(?Option $options): self
-//     {
-//         $this->options = $options;
+    public function setOptions(?Option $options): self
+    {
+        $this->options = $options;
 
-//         return $this;
-//     }
+        return $this;
+    }
 }

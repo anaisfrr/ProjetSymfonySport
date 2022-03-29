@@ -18,16 +18,16 @@ class Adresse
     #[ORM\Column(type: 'string', length: 255)]
     private $rue;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'integer', length: 10000)]
     private $numero;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'integer', length: 10000)]
     private $codePostal;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $ville;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'integer', nullable: true)]
     private $boite;
 
     #[ORM\OneToMany(mappedBy: 'adresses', targetEntity: Inscription::class)]
