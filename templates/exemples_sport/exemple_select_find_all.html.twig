@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<h1>Sport :</h1>
+
+
+
+{# {{ dump (sports) }} #}
+{% for sport in sports %}
+    <br>
+    {{ sport.nom }} :     
+
+    <form action="exemple_formulaire.html.twig">
+      <button type="submit">
+        <a href="{{ path('inscription_user') }}">Inscription</a>
+        </button>
+    </form>
+    <br>
+
+    {% endfor %}
+{% endblock %}

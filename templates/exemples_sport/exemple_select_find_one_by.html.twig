@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 {% block body %}
-L'objet Sport reçu de la vue est :
+Sport :
 
 <h4>
 Nom: {{sport.getNom}}
@@ -8,5 +8,6 @@ Nom: {{sport.getNom}}
 Catégorie: {{sport.getCategorie}}
 </h4>
 
+<button type="submit" class="btn">Inscription</button>
 
 {% endblock %}
